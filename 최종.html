@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영어 구문 해석 완벽 마스터</title>
+<style>
+  body { 
+    font-family: 'Malgun Gothic', 'Segoe UI', sans-serif; 
+    line-height: 1.6; 
+    padding: 20px; 
+    background-color: #f4f7f6; 
+    color: #333; 
+    max-width: 900px; 
+    margin: auto;
+  }
+  h1 { text-align: center; color: #2c3e50; margin-bottom: 30px; }
+  .tab { 
+    overflow: hidden; 
+    border: 1px solid #ccc; 
+    background-color: #e9ecef; 
+    border-radius: 8px 8px 0 0; 
+    display: flex; 
+  }
+  .tab button { 
+    background-color: inherit; 
+    float: left; 
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    padding: 14px 16px; 
+    transition: 0.3s; 
+    font-size: 15px; 
+    font-weight: bold; 
+    flex: 1; 
+  }
+  .tab button:hover { background-color: #ddd; }
+  .tab button.active { background-color: #3498db; color: white; }
+  .tabcontent { 
+    display: none; 
+    padding: 30px; 
+    border: 1px solid #ccc; 
+    border-top: none; 
+    background-color: white; 
+    border-radius: 0 0 8px 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  }
+  h2 { color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+  h3 { color: #34495e; margin-top: 25px; }
+  ul { padding-left: 20px; }
+  .quiz { background-color: #e8f4f8; border-left: 5px solid #3498db; padding: 15px; margin: 20px 0; border-radius: 4px; }
+  .chunking { background-color: #eafaf1; border-left: 5px solid #2ecc71; padding: 15px; margin: 20px 0; border-radius: 4px; font-size: 1.05em; }
+  .chunking strong { color: #27ae60; }
+  .chunking p { margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
+  .chunking p:last-child { border-bottom: none; }
+  .answer-btn { margin-top: 10px; padding: 8px 12px; background-color: #34495e; color: white; border: none; cursor: pointer; border-radius: 4px; }
+  .answer-btn:hover { background-color: #2c3e50; }
+  .answer-text { display: none; margin-top: 10px; font-weight: bold; color: #c0392b; }
+</style>
+</head>
+<body>
+
+<h1>📖 영어 구문 해석 완벽 마스터</h1>
+
+<!-- 탭 버튼 영역 -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Tab1')" id="defaultOpen">1. 구문해석 기초</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab2')">2. to부정사와 동명사</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab3')">3. 분사구문</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab4')">4. 주어 해석하기</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab5')">5. 수능 유형별 전략</button>
+</div>
+
+<!-- 탭 1 내용 -->
+<div id="Tab1" class="tabcontent">
+  <h2>구문해석 기초 (문장의 형식)</h2>
+  <p>문장의 기본 뼈대인 1형식부터 5형식까지의 구조와 품사의 역할을 이해합니다.</p>
+  <ul>
+    <li><strong>1형식:</strong> S + V (주어 + 동사) + M(수식어)</li>
+    <li><strong>2형식:</strong> S + V + SC (주어 + 동사 + 주격보어)</li>
+    <li><strong>3형식:</strong> S + V + O (주어 + 동사 + 목적어)</li>
+    <li><strong>4형식:</strong> S + V + IO + DO (주어 + 동사 + 간접목적어 + 직접목적어)</li>
+    <li><strong>5형식:</strong> S + V + O + OC (주어 + 동사 + 목적어 + 목적격보어)</li>
+  </ul>
+
+  <div class="chunking">
+    <h3>✂️ 끊어읽기 연습</h3>
+    <p>1. The doctor / wrote / the patient / a prescription / for his disease.<br>
+       (의사는 / 써주었다 / 환자에게 / 처방전을 / 그의 질병을 위한)</p>
+    <p>2. Abilities like empathy and communication / make / us / human.<br>
+       (공감과 소통 같은 능력들은 / 만든다 / 우리를 / 인간답게)</p>
+    <p>3. Surfing the internet / gives / me / a lot of information.<br>
+       (인터넷을 검색하는 것은 / 준다 / 나에게 / 많은 정보를)</p>
+    <p>4. His grandfather / bought / him / a new bicycle.<br>
+       (그의 할아버지는 / 사주셨다 / 그에게 / 새 자전거를)</p>
+    <p>5. The teacher / considered / the boy / a genius.<br>
+       (선생님은 / 여겼다 / 그 소년을 / 천재로)</p>
+  </div>
+
+  <div class="quiz">
+    <h3>✅ 확인 문제</h3>
+    <p>Q. 다음 문장의 형식을 고르시오.<br>"Governments have a responsibility to protect culture."</p>
+    <button class="answer-btn" onclick="toggleAnswer('ans1')">정답 확인</button>
+    <div id="ans1" class="answer-text">정답: 3형식 (S + V + O)<br>해설: 주어(Governments) + 동사(have) + 목적어(a responsibility) 구조이며 뒷부분은 수식어구입니다.</div>
+  </div>
+</div>
+
+<!-- 탭 2 내용 -->
+<div id="Tab2" class="tabcontent">
+  <h2>to부정사와 동명사</h2>
+  <p>동사가 명사, 형용사, 부사 등으로 변신하여 문장에서 다양한 역할을 합니다.</p>
+  <ul>
+    <li><strong>명사적 용법:</strong> 주어, 목적어, 보어 역할 (~하는 것)</li>
+    <li><strong>형용사적 용법:</strong> 앞의 명사를 수식 (~할, ~하는)</li>
+    <li><strong>부사적 용법:</strong> 목적, 결과, 원인 등을 나타냄 (~하기 위해, ~해서)</li>
+    <li><strong>의문사 + to부정사:</strong> 명사구 역할, 의문사 + 주어 + should + 동사원형으로 변환 가능</li>
+  </ul>
+
+  <div class="chunking">
+    <h3>✂️ 끊어읽기 연습</h3>
+    <p>1. I don't know / how to allocate the budget / fairly.<br>
+       (나는 모른다 / 예산을 어떻게 할당할지 / 공정하게)</p>
+    <p>2. She couldn’t decide / what to say / at the meeting.<br>
+       (그녀는 결정할 수 없었다 / 무엇을 말할지 / 회의에서)</p>
+    <p>3. I have / some homework to finish / by tomorrow.<br>
+       (나는 가지고 있다 / 끝내야 할 약간의 숙제를 / 내일까지)</p>
+    <p>4. To master a language / requires / constant practice.<br>
+       (언어를 마스터하는 것은 / 요구한다 / 끊임없는 연습을)</p>
+    <p>5. He went to the store / to buy some milk.<br>
+       (그는 가게에 갔다 / 우유를 약간 사기 위해)</p>
+  </div>
+
+  <div class="quiz">
+    <h3>✅ 확인 문제</h3>
+    <p>Q. 다음 중 형용사적 용법으로 쓰인 to부정사는 무엇일까요?</p>
+    <p>1. To read books is fun. <br>2. I need something to drink. <br>3. I went there to meet him.</p>
+    <button class="answer-btn" onclick="toggleAnswer('ans2')">정답 확인</button>
+    <div id="ans2" class="answer-text">정답: 2번<br>해설: something이라는 대명사를 뒤에서 '마실'이라는 형용사처럼 수식하고 있습니다. 1번은 명사적, 3번은 부사적(목적) 용법입니다.</div>
+  </div>
+</div>
+
+<!-- 탭 3 내용 -->
+<div id="Tab3" class="tabcontent">
+  <h2>동명사와 분사구문 완전 정복</h2>
+  <p>동명사와 to부정사의 본질적 의미 차이와 분사구문의 변환 원리를 다룹니다.</p>
+  <ul>
+    <li><strong>동명사(-ing): 과거 지향</strong> (이미 일어난 일, 경험, 습관)</li>
+    <li><strong>to부정사(to V): 미래 지향</strong> (아직 안 일어난 일, 소망, 의지)</li>
+    <li><strong>분사구문 변환:</strong> 접속사 생략 → 주어 일치 시 생략 → 동사를 V-ing로 변환</li>
+    <li><strong>분사구문의 부정:</strong> Not 또는 Never를 분사구문 맨 앞에 위치시킴 (예: Not knowing)</li>
+  </ul>
+
+  <div class="chunking">
+    <h3>✂️ 끊어읽기 연습</h3>
+    <p>1. Not knowing the answer, / he kept silent.<br>
+       (정답을 알지 못해서, / 그는 침묵을 유지했다)</p>
+    <p>2. I remember / locking the door / before leaving.<br>
+       (나는 기억한다 / 문을 잠갔던 것을 / 떠나기 전에)</p>
+    <p>3. Seen from a distance, / the rock / looked like / a human face.<br>
+       (멀리서 보였을 때, / 그 바위는 / ~처럼 보였다 / 사람의 얼굴)</p>
+    <p>4. Opening the envelope, / I found / a letter inside.<br>
+       (봉투를 열었을 때, / 나는 발견했다 / 안에 있는 편지를)</p>
+    <p>5. Feeling tired, / she went to bed / early.<br>
+       (피곤함을 느껴서, / 그녀는 잠자리에 들었다 / 일찍)</p>
+  </div>
+
+  <div class="quiz">
+    <h3>✅ 확인 문제</h3>
+    <p>Q. 괄호 안의 올바른 형태를 고르시오.<br>"I stopped ( smoking / to smoke ). (해석: 나는 담배를 끊었다)"</p>
+    <button class="answer-btn" onclick="toggleAnswer('ans3')">정답 확인</button>
+    <div id="ans3" class="answer-text">정답: smoking<br>해설: 'stop + -ing'는 하던 행위를 그만두다(과거 지향)라는 뜻입니다. 'stop + to V'는 ~하기 위해 멈추다라는 의미가 됩니다.</div>
+  </div>
+</div>
+
+<!-- 탭 4 내용 -->
+<div id="Tab4" class="tabcontent">
+  <h2>주어 해석하기</h2>
+  <p>다양한 형태의 명사류가 주어로 올 때 단수 취급을 하며 덩어리로 묶어 해석하는 것이 중요합니다.</p>
+  <ul>
+    <li><strong>명사구 주어:</strong> to부정사, 동명사 (~하는 것은)</li>
+    <li><strong>명사절 주어:</strong> that, whether, 의문사가 이끄는 절 (S가 V하다는 것은 / S가 V하는지는)</li>
+    <li><strong>가주어 it:</strong> 주어가 너무 길 때 주어 자리에 it을 쓰고 진주어는 뒤로 보냅니다.</li>
+    <li><strong>단수 취급:</strong> 구나 절이 주어로 쓰일 때는 항상 3인칭 단수 취급합니다.</li>
+  </ul>
+
+  <div class="chunking">
+    <h3>✂️ 끊어읽기 연습</h3>
+    <p>1. Whether this children's song will be a big hit / is / doubtful.<br>
+       (이 동요가 크게 유행할 것인지 아닌지는 / ~이다 / 의심스러운)</p>
+    <p>2. Where we spend our vacation / determines / the total expenditure.<br>
+       (우리가 어디서 휴가를 보낼지가 / 결정한다 / 총 지출을)</p>
+    <p>3. To make new friends / is / not always easy.<br>
+       (새로운 친구를 사귀는 것은 / ~이다 / 항상 쉽지만은 않은)</p>
+    <p>4. That he loves her / is / true.<br>
+       (그가 그녀를 사랑한다는 것은 / ~이다 / 사실)</p>
+    <p>5. It is important / for us / to protect the environment.<br>
+       (중요하다 / 우리가(의미상 주어) / 환경을 보호하는 것은)</p>
+  </div>
+
+  <div class="quiz">
+    <h3>✅ 확인 문제</h3>
+    <p>Q. 다음 문장의 빈칸에 알맞은 단어를 고르시오.<br>"Learning some phrases in Spanish ( is / are ) helpful."</p>
+    <button class="answer-btn" onclick="toggleAnswer('ans4')">정답 확인</button>
+    <div id="ans4" class="answer-text">정답: is<br>해설: 동명사구(Learning ~ Spanish)가 주어이므로 3인칭 단수 취급하여 is를 씁니다. phrases에 속아 복수로 쓰면 안 됩니다!</div>
+  </div>
+</div>
+
+<!-- 탭 5 내용 -->
+<div id="Tab5" class="tabcontent">
+  <h2>수능 영어 영역별 스킬 & 공부방법</h2>
+  <p>수능 영어의 대표적인 고난도 유형들을 정복하기 위한 전략과 올바른 접근법을 소개합니다.</p>
+  
+  <h3>1. 대의 파악 (주제, 제목, 요지)</h3>
+  <ul>
+    <li><strong>접근 스킬:</strong> 첫 문장과 마지막 문장을 꼼꼼히 읽어 글의 방향성을 잡습니다. 'However', 'But', 'Therefore'와 같은 연결사 뒤의 문장에 글쓴이의 주장이 담겨있는 경우가 많습니다.</li>
+    <li><strong>공부 방법:</strong> 지문을 다 읽은 후, 스스로 한 문장으로 글의 내용을 요약해보는 연습을 꾸준히 하세요. 선택지를 읽기 전에 먼저 우리말로 정답을 예측해 보는 것이 좋습니다.</li>
+  </ul>
+
+  <h3>2. 빈칸 추론</h3>
+  <ul>
+    <li><strong>접근 스킬:</strong> 빈칸은 절대 지엽적인 내용에 뚫리지 않습니다. 항상 글의 핵심 주제(Main Idea)와 직결되거나, 주제를 뒷받침하는 핵심 근거에 빈칸이 존재합니다. 빈칸 문장을 먼저 읽고 '무엇을 찾아야 하는지' 타겟을 설정한 후 지문을 읽으세요.</li>
+    <li><strong>공부 방법:</strong> 지문 속에 반드시 빈칸에 들어갈 내용과 똑같은 의미를 지닌 '재진술(Paraphrasing)' 문장이 숨어 있습니다. 같은 의미를 다르게 표현한 단어와 구를 연결하는 훈련을 하세요.</li>
+  </ul>
+
+  <h3>3. 순서 배열 & 문장 삽입</h3>
+  <ul>
+    <li><strong>접근 스킬:</strong> '지시어(This, That, Such)', '대명사(He, They, It)', '연결사(For example, On the other hand)'라는 3대 힌트를 적극적으로 활용해야 합니다. 내용적 흐름뿐만 아니라 논리적 단서를 찾아 꼬리물기를 하듯 연결합니다.</li>
+    <li><strong>공부 방법:</strong> 정답을 맞힌 후에도 왜 A 다음에 B가 와야 하는지 근거에 밑줄을 긋는 연습을 하세요. 근거 없이 감으로 푸는 습관을 고치는 것이 가장 중요합니다.</li>
+  </ul>
+
+  <h3>4. 어법 & 어휘</h3>
+  <ul>
+    <li><strong>접근 스킬:</strong> 수능 어법은 나오는 패턴이 정해져 있습니다. (수일치, 동사/준동사 구별, 관계대명사/접속사 구별 등) 어휘 문제는 반의어가 정답인 경우가 90% 이상이므로 긍정(+)/부정(-) 뉘앙스를 파악하세요.</li>
+    <li><strong>공부 방법:</strong> 기출문제에 나온 어법 포인트들을 노트에 정리하고, 각 탭 1~4에서 배운 '구문 분석(주어, 동사 찾기)'을 철저히 연습하여 문장 구조를 한눈에 파악하는 능력을 기르세요.</li>
+  </ul>
+</div>
+
+<script>
+  // 탭 전환 기능을 담당하는 자바스크립트
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // 기본적으로 첫 번째 탭 열기
+  document.getElementById("defaultOpen").click();
+
+  // 정답 토글 기능
+  function toggleAnswer(answerId) {
+    var answerDiv = document.getElementById(answerId);
+    if (answerDiv.style.display === "block") {
+      answerDiv.style.display = "none";
+    } else {
+      answerDiv.style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
